@@ -1,3 +1,7 @@
 /fe/
 /player/dist/
 /player/build/
+/media/
+/dist/
+/build/
+/server/__pycache__/

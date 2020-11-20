@@ -100,7 +100,7 @@ class PlayerServer(QVideoWidget):
     @pyqtSlot(str)
     def udpSender(self, msg):
         self.udpSendSock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        self.udpSendSock.sendto(msg.encode(), (self.setup['rtIp'], self.setup['rtPort']))
+        self.udpSendSock.sendto(msg.encode('utf-8'), (self.setup['rtIp'], self.setup['rtPort']))
         self.udpSendSock.close()
     
     def setMedia(self, mediaFile):
